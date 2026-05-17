@@ -14,9 +14,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'role',
-        'nip',
-        'jabatan',
     ];
 
     protected $hidden = [
@@ -30,47 +27,5 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-    }
-
-    // Relationships
-    public function evaluations()
-    {
-        return $this->hasMany(Evaluation::class);
-    }
-
-    public function topsisResults()
-    {
-        return $this->hasMany(TopsisResult::class);
-    }
-
-    // Helper Methods
-    public function isAdmin()
-    {
-        return $this->role === 'admin';
-    }
-
-    public function isPersonil()
-    {
-        return $this->role === 'personil';
-    }
-
-    public function isPimpinan()
-    {
-        return $this->role === 'pimpinan';
-    }
-
-    public function canManageData()
-    {
-        return $this->isAdmin();
-    }
-
-    public function canViewRecommendation()
-    {
-        return $this->isPimpinan() || $this->isAdmin();
-    }
-
-    public function canViewRanking()
-    {
-        return $this->isPimpinan() || $this->isAdmin();
     }
 }

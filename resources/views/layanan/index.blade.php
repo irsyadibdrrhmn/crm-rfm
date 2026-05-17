@@ -1,0 +1,1 @@
+<x-app-layout><div class='p-6'><a href='{{route("layanan.create")}}'>Tambah</a><table>@foreach($data as $d)<tr><td>{{$d->nama_layanan}}</td><td>{{$d->harga}}</td><td><a href='{{route("layanan.edit",$d)}}'>Edit</a></td></tr>@endforeach</table>{{$data->links()}}</div></x-app-layout>

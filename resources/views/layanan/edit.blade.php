@@ -1,0 +1,1 @@
+<x-app-layout><div class='p-6'><form method='POST' action='{{route("layanan.update",$layanan)}}'>@csrf @method('PUT') <input name='nama_layanan' value='{{$layanan->nama_layanan}}'><input name='harga' type='number' value='{{$layanan->harga}}'><button>Update</button></form></div></x-app-layout>

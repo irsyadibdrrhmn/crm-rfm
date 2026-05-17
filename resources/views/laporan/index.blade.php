@@ -1,0 +1,1 @@
+<x-app-layout><div class='p-6 print:p-2'><h1>Laporan CRM</h1><p>Pelanggan: {{count($pelanggan)}}</p><p>Transaksi: {{count($transaksi)}}</p><p>Hasil RFM: {{count($rfm)}}</p><button onclick='window.print()'>Print</button></div></x-app-layout>

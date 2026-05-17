@@ -1,0 +1,1 @@
+<x-app-layout><div class='p-6'><form method='POST' action='{{route("layanan.store")}}'>@csrf <input name='nama_layanan'><input name='harga' type='number'><button>Simpan</button></form></div></x-app-layout>
