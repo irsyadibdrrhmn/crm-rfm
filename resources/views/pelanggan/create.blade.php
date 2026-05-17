@@ -1,0 +1,1 @@
+<x-app-layout><div class='p-6'><form method='POST' action='{{route("pelanggan.store")}}'>@csrf <input name='nama' placeholder='nama'><input name='no_hp'><input name='alamat'><input type='date' name='tanggal_daftar'><button>Simpan</button></form></div></x-app-layout>
